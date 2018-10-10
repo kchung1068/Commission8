@@ -61,6 +61,13 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQs-a1-4ef">
+                                <rect key="frame" x="111" y="502" width="145" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -71,6 +78,7 @@
                     </view>
                     <connections>
                         <outlet property="commissionPayTextField" destination="rmb-xn-Dgg" id="7De-Dq-Uxj"/>
+                        <outlet property="spareLabel" destination="yQs-a1-4ef" id="Q06-th-aHS"/>
                         <outlet property="totalPayLabel" destination="Eqy-hs-yuF" id="mnL-Ub-biy"/>
                     </connections>
                 </viewController>

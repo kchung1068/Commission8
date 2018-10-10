@@ -13,6 +13,7 @@ class ViewController: UIViewController
 
     @IBOutlet var totalPayLabel: UILabel!
     @IBOutlet var commissionPayTextField: UITextField!
+    @IBOutlet var spareLabel: UILabel!
     let basePay:Double = 500
     
     
@@ -27,15 +28,22 @@ class ViewController: UIViewController
 
     @IBAction func calculateOnTapped(_ sender: UIButton)
     {
-        getInput()
+       let comPay = getInput()
+        let totalPay = comPay + Double(basePay)
+        totalPayLabel.text = "Total Pay = $\(totalPay)"
+        
+        //comPay came back as a double
+        //Mr.Brown's set up had basePay as a Int, therefore it didnt work
         
     }
-    func getInput(){
+    func getInput() -> Double
+    {
         if let data = commissionPayTextField.text, let commissionPay = Double(data){
-            print(("everything is fine"))
+            spareLabel.text = "Everything is fine"
+            return commissionPay
         } else {
-            print("error occured")
-            
+             spareLabel.text = "Error occured"
+          return 0
         }
         
         
